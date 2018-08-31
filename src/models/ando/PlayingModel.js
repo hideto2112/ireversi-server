@@ -10,4 +10,4 @@ const PlayingSchema = new Schema({
     userId: Number,
 });
 
-module.exports = mongoose.model('Playing', PlayingSchema);
+module.exports = mongoose.model('AndoPlaying', PlayingSchema);
