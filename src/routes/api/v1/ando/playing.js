@@ -22,13 +22,13 @@ router.route('/')
     //     }
     // ]);
     const Playing = new PlayingModel({
-        x: req.body.x,
-        y: req.body.y,
-        userId: req.body.userId,
+      x: req.body.x,
+      y: req.body.y,
+      userId: req.body.userId,
     });
     await Playing.save();
 
-    const playingAll = await PlayingModel.find({}, {__v:0, _id:0});
+    const playingAll = await PlayingModel.find({}, { __v: 0, _id: 0 });
 
     // const minX = Math.min.apply(null, playingAll.map(function(data){return data.x;}));
     // const maxX = Math.max.apply(null, playingAll.map(function(data){return data.x;}));
@@ -38,6 +38,6 @@ router.route('/')
     // }
 
     res.json(playingAll);
-});
+  });
 
 module.exports = router;

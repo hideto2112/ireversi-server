@@ -8,4 +8,4 @@ const PlayingSchema = new Schema({
   userId: Number,
 });
 
-module.exports = mongoose.model('AndoPlaying', PlayingSchema);
+module.exports = mongoose.model('MatsudaPlaying', PlayingSchema);

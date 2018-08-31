@@ -39,8 +39,8 @@ describe('Request pieces', () => {
         {
           x: expect.any(Number),
           y: expect.any(Number),
-          userId: expect.any(Number)
-        }
+          userId: expect.any(Number),
+        },
       ]);
       const playing = await PlayingModel.findOne({ userId });
       expect(playing).toMatchObject(playingMatcher);
@@ -84,7 +84,7 @@ describe('Request pieces', () => {
         [
           firstPlayingMatcher,
           secondPlayingMatcher,
-        ]
+        ],
       );
     });
 
@@ -146,7 +146,7 @@ describe('Request pieces', () => {
             userId: thirdPlayingMatcher.userId,
           },
           thirdPlayingMatcher,
-        ]
+        ],
       );
     });
   });

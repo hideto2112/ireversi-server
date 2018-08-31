@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-const PlayingSchema = new Schema({
+const PieceSchema = new Schema({
   x: Number,
   y: Number,
   userId: Number,
 });
 
-module.exports = mongoose.model('AndoPlaying', PlayingSchema);
+module.exports = mongoose.model('AndoPiece', PieceSchema);

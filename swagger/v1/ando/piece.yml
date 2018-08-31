@@ -1,0 +1,74 @@
+tags:
+  - name: piece
+    description: Piece API
+
+/ando/piece:
+  get:
+    tags:
+      - piece
+    parameters:
+      - name: "name"
+        in: "query"
+        description: "user info"
+        required: true
+        type: "string"
+    responses:
+      200:
+        description: "success"
+        schema:
+          type: "object"
+          properties:
+            user_id:
+              type: "string"
+              example: "aaaaaaaa"
+            name:
+              type: "string"
+              example: "aaaaaaaa"
+            email:
+              type: "string"
+              example: "aaa@aaa.aaa"
+            password:
+              type: "string"
+              example: "aaaaaaaa"
+            created:
+              type: "string"
+              example: "YYYY-MM-DD HH:mm:ss"
+  post:
+    tags:
+      - piece
+    parameters:
+      - name: "x"
+        in: "formData"
+        description: "X position"
+        required: true
+        type: "number"
+      - name: "y"
+        in: "formData"
+        description: "Y position"
+        required: true
+        type: "number"
+      - name: "userId"
+        in: "formData"
+        description: "User ID"
+        required: true
+        type: "number"
+    responses:
+      200:
+        description: "Piece data"
+        schema:
+          type: array
+          items:
+            type: "object"
+            properties:
+              x:
+                type: "integer"
+                format: "int64"
+                example: 1
+              y:
+                type: "integer"
+                format: "int64"
+                example: 1
+              userId:
+                type: "integer"
+                format: "int64"
+                example: 1
